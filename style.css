@@ -1,0 +1,271 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    overflow-x: hidden;
+}
+
+#shot {
+    position: absolute;
+    padding: 6px 14px;
+    bottom: 0px;
+    left: 0px;
+    margin: 5px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+    color: darkgrey;
+    font-weight: 1000;
+}
+
+#shot2 {
+    position: absolute;
+    padding: 6px 14px;
+    bottom: 0px;
+    left: 0px;
+    margin: 5px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+    color: darkgrey;
+    font-weight: 1000;
+}
+
+#oldphoto{
+    width:15rem;
+    height:12rem;
+    left:0;
+    margin-top: 2rem;
+    position:absolute;
+    z-index: 1;
+}
+
+#siteimage{
+    width:55rem;
+    height:45rem;
+    top:0;
+    right:0;
+    position:absolute;
+    z-index: -1;
+}
+
+.mapdiv{
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+/*
+.container{
+    width: 100%;
+    height:100%;
+    display:block;
+    position:absolute;
+}*/
+
+.others{
+    width:100%;
+    display: flex; 
+    justify-content: center;
+    overflow-y: hidden;
+    overflow-x:inherit;
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+
+.others img{
+    width: 300px;;
+    height:auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    float:left;
+}
+
+.others img:hover{
+    filter:gray;
+    -webkit-filter:grayscale(1);
+    transition: .5s ease;
+}
+
+.catalogue{
+    width:90%;
+    display:flex;
+    padding-top: 2rem;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: hidden;
+    overflow-x:inherit;
+}
+
+.catalogue img{
+    width: 400px;
+    height:auto;
+    overflow:hidden;
+    margin:10px;
+}
+
+.catalogue img:hover{
+    filter:gray;
+    -webkit-filter:grayscale(1);
+    transition: .5s ease;
+}
+
+section{
+    display:inline-block;
+    justify-content:center;
+    width:80vw;
+    height:100vh;
+    margin-top: 5rem;
+    position:relative;
+    overflow-x: hidden;
+    margin-left: 10%;
+}
+
+
+.webgl
+{
+    position: absolute;
+    outline: none;
+}
+
+.text{
+    position: absolute;
+    z-index:1;
+    margin-top: 20%;
+    margin-left: 10vw;
+    height: 100%;
+    width: 100%;
+    align-items:left;
+}
+
+.imgtxt{
+    position: absolute;
+    bottom:10%;
+    left:50%;
+    transform:translate(-50%,10%);
+    font-weight: bold;
+}
+
+.img{
+    position:relative;
+    text-align: center;
+    color:white;
+}
+
+h1{
+    font-size:8rem;
+    position:relative;
+    left:0;
+    color:rgba(0,0,0,0.8);
+    line-height: 8rem;
+    background-color: rgba(255,255,255,0.3);
+}
+
+h2{
+    font-size: 2em;
+    font-weight: lighter;
+    margin-left: 10vw;
+    position: absolute; 
+    z-index: 1;
+    top: 0;
+    right:0;
+    color:white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+
+h3{
+    position:relative;
+    align-self: center;
+    justify-content: center;
+    font-size: 3em;
+    left:40%;
+    margin-top: 0.25em;
+}
+
+h4{
+    position:fixed;
+    top:50%;
+    font-size: 2em;
+    left:0;
+    background-color: yellow;
+}
+
+h5{
+    position:static;
+    top:0;
+    left:0;
+    padding:0.5%;
+    font-size: 2em;
+    color:darkslategray;
+}
+
+a:link{
+    color: lightgrey;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightgray;
+    text-decoration:underline;
+}
+
+a:hover{
+    color: yellow;
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.3em;
+    position: relative;
+    line-height: 1em;
+    left:0;
+    width:20em;
+    word-wrap: break-word;
+}
+
+.narrativetxt{
+    width:80vw;
+}
+
+#discuss_thread{
+    width:50%;
+}
+
+.commentbox{
+    display:inline-block;
+    justify-content:center;
+    width:80vw;
+    margin-top: 5rem;
+    position:relative;
+    overflow-x: hidden;
+    margin-left: 10%;
+    
+}
+
+.narrative{
+    display:inline-block;
+    justify-content:center;
+    width:80vw;
+    margin-top: 5rem;
+    position:relative;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    margin-left: 10%;
+    align-items: center;
+}
