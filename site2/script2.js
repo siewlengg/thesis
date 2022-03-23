@@ -10,7 +10,7 @@ var gltfLoader = new GLTFLoader()
 
 
 // Debug
-var gui = new dat.GUI()
+/*var gui = new dat.GUI()*/
 
 // Canvas
 var canvas = document.getElementById('streetview2')
@@ -51,13 +51,13 @@ gltfLoader.load(`static/model/${model}.glb`, function(glb){
 
     extension.rotation.y= -19.8;
 
-    const positionFolder = gui.addFolder('position')
+    /*const positionFolder = gui.addFolder('position')
     positionFolder.add(extension.position, 'x').min(-150).max(150);
     positionFolder.add(extension.position, 'y').min(-50).max(50);
     positionFolder.add(extension.position, 'z').min(-150).max(150);
 
     const rotationFolder = gui.addFolder('rotation')
-    rotationFolder.add(extension.rotation, 'y').min(-50).max(-10);
+    rotationFolder.add(extension.rotation, 'y').min(-50).max(-10);*/
     
     scene.add(extension)
 }, function (xhr){
@@ -76,10 +76,10 @@ light.position.x = -150
 light.position.y = 120
 light.position.z = -43
 
-const lightFolder = gui.addFolder('light')
+/*const lightFolder = gui.addFolder('light')
 lightFolder.add(light.position, 'x').min(-150).max(150);
 lightFolder.add(light.position, 'y').min(-50).max(150);
-lightFolder.add(light.position, 'z').min(-150).max(150);
+lightFolder.add(light.position, 'z').min(-150).max(150);*/
 
 scene.add(light)
 

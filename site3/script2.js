@@ -10,7 +10,8 @@ var gltfLoader = new GLTFLoader()
 
 
 // Debug
-var gui = new dat.GUI()
+//var gui = new dat.GUI()
+
 
 // Canvas
 var canvas = document.getElementById('streetview2')
@@ -45,19 +46,25 @@ gltfLoader.load(`static/model/${model}.glb`, function(glb){
     console.log(glb);
     const extension = glb.scene;
     extension.position.x= -1.1; 
-    extension.position.y= 3.9; 
-    extension.position.z= 7.4;
+    extension.position.y= 4; 
+    extension.position.z= 7.6;
     extension.scale.multiplyScalar(2); 
 
     extension.rotation.y= -4.4;
 
-    const positionFolder = gui.addFolder('position')
-    positionFolder.add(extension.position, 'x').min(-150).max(150);
-    positionFolder.add(extension.position, 'y').min(-50).max(50);
-    positionFolder.add(extension.position, 'z').min(-150).max(150);
+    
+/*const positionFolder = gui.addFolder('position')
+positionFolder.add(extension.position, 'x').min(-150).max(150);
+positionFolder.add(extension.position, 'y').min(-50).max(50);
+positionFolder.add(extension.position, 'z').min(-150).max(150);
 
-    const rotationFolder = gui.addFolder('rotation')
-    rotationFolder.add(extension.rotation, 'y').min(-50).max(50);
+const rotationFolder = gui.addFolder('rotation')
+rotationFolder.add(extension.rotation, 'y').min(-50).max(50);
+
+const lightFolder = gui.addFolder('light')
+lightFolder.add(light.position, 'x').min(-150).max(150);
+lightFolder.add(light.position, 'y').min(-50).max(50);
+lightFolder.add(light.position, 'z').min(-150).max(150);*/
     
     scene.add(extension)
 }, function (xhr){
@@ -72,14 +79,9 @@ gltfLoader.load(`static/model/${model}.glb`, function(glb){
 
 var light = new THREE.DirectionalLight(0xffffff,1);
 
-light.position.x = -9
-light.position.y = 25
-light.position.z = -14
-
-const lightFolder = gui.addFolder('light')
-lightFolder.add(light.position, 'x').min(-150).max(150);
-lightFolder.add(light.position, 'y').min(-50).max(50);
-lightFolder.add(light.position, 'z').min(-150).max(150);
+light.position.x = -53.8
+light.position.y = -11
+light.position.z = 19
 
 scene.add(light)
 

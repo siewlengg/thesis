@@ -9,7 +9,14 @@ var textureLoader = new THREE.TextureLoader()
 var gltfLoader = new GLTFLoader()
 
 // Debug
-var gui = new dat.GUI()
+//var gui = new dat.GUI()
+/*const positionFolder = gui.addFolder('position')
+    positionFolder.add(extension.position, 'x').min(-150).max(150);
+    positionFolder.add(extension.position, 'y').min(-50).max(50);
+    positionFolder.add(extension.position, 'z').min(-150).max(150);
+
+    const rotationFolder = gui.addFolder('rotation')
+    rotationFolder.add(extension.rotation, 'y').min(-50).max(50);*/
 
 // Canvas
 var canvas = document.getElementById('birdseye')
@@ -30,19 +37,18 @@ foreFolder.add(foreground.position, 'x').min(-150).max(150);
 foreFolder.add(foreground.position, 'y').min(-50).max(50);
 foreFolder.add(foreground.position, 'z').min(-150).max(150);*/
 
-//gltf google earth
-gltfLoader.load(`static/model/${basemodel}.glb`, function(glb){
-    console.log(glb);
-    const earth = glb.scene;
-
-    /*const positionFolder = gui.addFolder('position')
+ /*const positionFolder = gui.addFolder('position')
     positionFolder.add(extension.position, 'x').min(-150).max(150);
     positionFolder.add(extension.position, 'y').min(-50).max(50);
     positionFolder.add(extension.position, 'z').min(-150).max(150);
 
     const rotationFolder = gui.addFolder('rotation')
     rotationFolder.add(extension.rotation, 'y').min(-50).max(50);*/
-    
+
+//gltf google earth
+gltfLoader.load(`static/model/${basemodel}.glb`, function(glb){
+    console.log(glb);
+    const earth = glb.scene;    
     scene.add(earth)
 }, function (xhr){
     console.log((xhr.loaded/xhr.total*100) + '% loaded')
@@ -60,15 +66,6 @@ gltfLoader.load(`static/model/${model}.glb`, function(glb){
     extension.position.z= 0;
 
     extension.rotation.y= 0;
-
-    /*const positionFolder = gui.addFolder('position')
-    positionFolder.add(extension.position, 'x').min(-150).max(150);
-    positionFolder.add(extension.position, 'y').min(-50).max(50);
-    positionFolder.add(extension.position, 'z').min(-150).max(150);
-
-    const rotationFolder = gui.addFolder('rotation')
-    rotationFolder.add(extension.rotation, 'y').min(-50).max(50);*/
-    
     scene.add(extension)
 }, function (xhr){
     console.log((xhr.loaded/xhr.total*100) + '% loaded')
@@ -78,11 +75,11 @@ gltfLoader.load(`static/model/${model}.glb`, function(glb){
 
 // Lights
 
-var light = new THREE.DirectionalLight(0xffffff,2);
+var light = new THREE.DirectionalLight(0xffffff,1);
 
-light.position.x = 150
-light.position.y = 20
-light.position.z = 64
+light.position.x = 45
+light.position.y = -37
+light.position.z = -90
 
 var light2 = new THREE.DirectionalLight(0xffffff,2);
 
@@ -90,17 +87,18 @@ light2.position.x = -66
 light2.position.y = 45
 light2.position.z = -150
 
-//scene.add(light)
-//scene.add(light2)
-
-const lightFolder = gui.addFolder('light')
+/*const lightFolder = gui.addFolder('light')
 lightFolder.add(light.position, 'x').min(-150).max(150);
 lightFolder.add(light.position, 'y').min(-50).max(50);
 lightFolder.add(light.position, 'z').min(-150).max(150);
 const light2Folder = gui.addFolder('light2')
 light2Folder.add(light2.position, 'x').min(-150).max(150);
 light2Folder.add(light2.position, 'y').min(-50).max(50);
-light2Folder.add(light2.position, 'z').min(-150).max(150);
+light2Folder.add(light2.position, 'z').min(-150).max(150);*/
+
+scene.add(light)
+//scene.add(light2)
+
 
 scene.add(new THREE.AmbientLight(0x333333));
 

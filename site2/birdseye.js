@@ -9,7 +9,7 @@ var textureLoader = new THREE.TextureLoader()
 var gltfLoader = new GLTFLoader()
 
 // Debug
-var gui = new dat.GUI()
+/*var gui = new dat.GUI()*/
 
 // Canvas
 var canvas = document.getElementById('birdseye')
@@ -25,10 +25,10 @@ var foreground = new THREE.Mesh(innercirc,innermat)
 foreground.position.set(-10,-0.25,-4.1)
 scene.add(foreground)
 
-const foreFolder = gui.addFolder('fore')
+/*const foreFolder = gui.addFolder('fore')
 foreFolder.add(foreground.position, 'x').min(-150).max(150);
 foreFolder.add(foreground.position, 'y').min(-50).max(50);
-foreFolder.add(foreground.position, 'z').min(-150).max(150);
+foreFolder.add(foreground.position, 'z').min(-150).max(150);*/
 
 //gltf google earth
 gltfLoader.load(`static/model/${basemodel}.glb`, function(glb){
@@ -93,14 +93,14 @@ light2.position.z = -150
 //scene.add(light)
 //scene.add(light2)
 
-const lightFolder = gui.addFolder('light')
+/*const lightFolder = gui.addFolder('light')
 lightFolder.add(light.position, 'x').min(-150).max(150);
 lightFolder.add(light.position, 'y').min(-50).max(50);
 lightFolder.add(light.position, 'z').min(-150).max(150);
 const light2Folder = gui.addFolder('light2')
 light2Folder.add(light2.position, 'x').min(-150).max(150);
 light2Folder.add(light2.position, 'y').min(-50).max(50);
-light2Folder.add(light2.position, 'z').min(-150).max(150);
+light2Folder.add(light2.position, 'z').min(-150).max(150);*/
 
 scene.add(new THREE.AmbientLight(0x333333));
 

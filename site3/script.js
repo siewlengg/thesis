@@ -10,7 +10,16 @@ var gltfLoader = new GLTFLoader()
 
 
 // Debug
-var gui = new dat.GUI()
+//var gui = new dat.GUI()
+
+/*const positionFolder = gui.addFolder('position')
+positionFolder.add(extension.position, 'x').min(-150).max(150);
+positionFolder.add(extension.position, 'y').min(-50).max(50);
+positionFolder.add(extension.position, 'z').min(-150).max(150);
+
+const rotationFolder = gui.addFolder('rotation')
+rotationFolder.add(extension.rotation, 'y').min(-50).max(50);*/
+
 
 // Canvas
 var canvas = document.getElementById('streetview')
@@ -49,15 +58,6 @@ gltfLoader.load(`static/model/${model}.glb`, function(glb){
     extension.scale.multiplyScalar(2); 
 
     extension.rotation.y= -3.22;
-
-    const positionFolder = gui.addFolder('position')
-    positionFolder.add(extension.position, 'x').min(-150).max(150);
-    positionFolder.add(extension.position, 'y').min(-50).max(50);
-    positionFolder.add(extension.position, 'z').min(-150).max(150);
-
-    const rotationFolder = gui.addFolder('rotation')
-    rotationFolder.add(extension.rotation, 'y').min(-50).max(50);
-    
     scene.add(extension)
 }, function (xhr){
     console.log((xhr.loaded/xhr.total*100) + '% loaded')
@@ -71,14 +71,16 @@ gltfLoader.load(`static/model/${model}.glb`, function(glb){
 
 var light = new THREE.DirectionalLight(0xffffff,1);
 
-light.position.x = -21
-light.position.y = 13
-light.position.z = -17
+light.position.x = -41
+light.position.y = 3
+light.position.z = -14
 
-const lightFolder = gui.addFolder('light')
+
+/*const lightFolder = gui.addFolder('light')
 lightFolder.add(light.position, 'x').min(-150).max(150);
 lightFolder.add(light.position, 'y').min(-50).max(50);
-lightFolder.add(light.position, 'z').min(-150).max(150);
+lightFolder.add(light.position, 'z').min(-150).max(150);*/
+
 
 scene.add(light)
 
