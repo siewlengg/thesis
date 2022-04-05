@@ -26,13 +26,18 @@ body
 }
 
 .right{
+    position:fixed;
     float:left;
+    height:100vh;
+    overflow-y: scroll;
     top:0;
     right:0;
+    padding-bottom: 2em;
     width:30%;
     z-index: 2;
     display: flex;
     flex-wrap:wrap;
+    background: linear-gradient(0deg, rgba(250,242,231,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .middle{
