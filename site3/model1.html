@@ -6,10 +6,55 @@
     <title>Model 1</title>
     <link type = "text/css" rel = "stylesheet" href = "../style.css">
 </head>
-<body>
+<div class = header>
+    <h7>12-20 Penhas Road</h7>
     <h5> <a href="index.html">  &lt Main </a></h5>
+</div>
+<body>
+
+<div class ="middle">
+    <br>
+    <br>
+    <section>
+        <h2>Street View</h2>
+        <canvas id= "streetview" class ='webgl'></canvas>
+        <script type = "module" src = "script.js"></script>
+        <button id="shot">Screenshot</button>
+    </section>
+    <section>
+        <h2>Street View</h2>
+        <canvas id= "streetview2" class ='webgl'></canvas>
+        <script type = "module" src = "script2.js"></script>
+        <button id="shot1.2">Screenshot</button>
+    </section>
+    <section>
+        <h2>Bird's Eye View</h2>
+        <canvas id="birdseye" class = 'webgl'></canvas>
+        <script>var basemodel ='site3'</script>
+        <script>var model = 'model1'</script>
+        <script type = "module" src = "birdseye.js"></script>
+        <button id="shot2">Screenshot</button>
+    </section>
+
+    <h3>Other Proposals</h3>
+
+    <div class = "others">
+        <div class="img">
+            <a href= "model2.html" target="_blank" rel="noopener noreferrer"><img src = "static/photos/2.png" alt = "Model2"><p class="imgtxt">Model2</p></a>
+        </div>
+        <div class="img">
+            <a href= "model3.html" target="_blank" rel="noopener noreferrer"><img src = "static/photos/3.png" alt = "Model3"><p class="imgtxt">Model3</p></a>
+        </div>
+        <div class="img">   
+            <a href= "model4.html" target="_blank" rel="noopener noreferrer"><img src = "static/photos/4.png" alt = "Model4"><p class="imgtxt">Model4</p></a>
+        </div>
+    </div>
+
+</div>
+
+<div class = "right">
     <div class = "narrative">
-        <h1>12-20 Penhas Road</h2>
+        <h4>12-20 Penhas Road</h4>
         <p>Proposed by: XYZ</p>
         <br>
         <br>
@@ -21,32 +66,9 @@
         </p>
     </div>
 
-    <h4 style="background-color: salmon">MODEL 1</h4>
-
-        <section>
-            <h2>Street View</h2>
-            <canvas id= "streetview" class ='webgl'></canvas>
-            <script type = "module" src = "script.js"></script>
-            <button id="shot">Screenshot</button>
-        </section>
-        <section>
-            <h2>Street View</h2>
-            <canvas id= "streetview2" class ='webgl'></canvas>
-            <script type = "module" src = "script2.js"></script>
-            <button id="shot1.2">Screenshot</button>
-        </section>
-        <section>
-            <h2>Bird's Eye View</h2>
-            <canvas id="birdseye" class = 'webgl'></canvas>
-            <script>var basemodel ='site3'</script>
-            <script>var model = 'model1'</script>
-            <script type = "module" src = "birdseye.js"></script>
-            <button id="shot2">Screenshot</button>
-        </section>
-
-        <div class ="commentbox">
-        <div id="disqus_thread"></div>
-<script>
+    <div class ="commentbox">
+    <div id="disqus_thread"></div>
+    <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
@@ -62,25 +84,18 @@
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
    
-    <div class = "narrative">
-        <h3>Other Proposals</h3>
+    <div class = "others">
+        <h6>Related proposals</h6>
+        <div class="img">
+            <a href= "2.2.html" target="_blank" rel="noopener noreferrer"><img src = "static/photos/2.2.png" alt = "Model2.2"><p class="imgtxt">Model8</p></a>
+        </div>
     </div>
 
-    <div class = "others">
-        <div class="img">
-            <a href= "model2.html" target="_blank" rel="noopener noreferrer"><img src = "static/photos/2.png" alt = "Model2"><p class="imgtxt">Model2</p></a>
-        </div>
-        <div class="img">
-            <a href= "model3.html" target="_blank" rel="noopener noreferrer"><img src = "static/photos/3.png" alt = "Model3"><p class="imgtxt">Model3</p></a>
-        </div>
-        <div class="img">   
-            <a href= "model4.html" target="_blank" rel="noopener noreferrer"><img src = "static/photos/4.png" alt = "Model4"><p class="imgtxt">Model4</p></a>
-        </div>
-    </div>
+</div>
 
 </body>
 

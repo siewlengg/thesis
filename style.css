@@ -236,11 +236,12 @@ h3{
 }
 
 h4{
-    position:fixed;
-    top:50%;
-    font-size: 2em;
+    font-size:5rem;
+    position:relative;
     left:0;
-    background-color: yellow;
+    color:rgba(0,0,0,0.8);
+    line-height: 4rem;
+    background-color: rgba(255,255,255,0.3);;
 }
 
 h5{
