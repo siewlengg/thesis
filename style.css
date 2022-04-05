@@ -14,6 +14,37 @@ body
     overflow-x: hidden;
 }
 
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    height: 3em;
+    width:100vw;
+    background-color: white;
+    border-bottom: 3px solid lightgrey;
+    z-index: 3;
+}
+
+.right{
+    float:left;
+    top:0;
+    right:0;
+    width:30%;
+    z-index: 2;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.middle{
+    float:left;
+    margin-top: 3em;
+    left:0;
+    width:70%;
+    flex-wrap:wrap;
+    background-color: white;
+}
+
+
 #shot {
     position: absolute;
     padding: 6px 14px;
@@ -128,12 +159,13 @@ body
 section{
     display:inline-block;
     justify-content:center;
-    width:80vw;
-    height:100vh;
-    margin-top: 5rem;
+    width:90%;
+    height:90vh;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
     position:relative;
-    overflow-x: hidden;
-    margin-left: 10%;
+    overflow: hidden;
+    margin-left: 5%;
 }
 
 
@@ -193,7 +225,7 @@ h3{
     position:relative;
     align-self: center;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2em;
     left:40%;
     margin-top: 0.25em;
 }
@@ -215,6 +247,21 @@ h5{
     color:darkslategray;
 }
 
+h6{
+    position: relative;
+    font-size:1.5em;
+    margin-top: 0.25em;
+    text-align: center;
+}
+
+h7{
+    font-size: 2em;
+    float:right;
+    padding: 0.5%;
+    color: rgb(156, 155, 155);
+    font-weight: 700;
+}
+
 a:link{
     color: lightgrey;
     text-decoration: none;
@@ -231,16 +278,11 @@ a:hover{
 }
 
 p{
-    font-size: 1.3em;
+    font-size: 1em;
     position: relative;
     line-height: 1em;
     left:0;
-    width:20em;
     word-wrap: break-word;
-}
-
-.narrativetxt{
-    width:80vw;
 }
 
 #discuss_thread{
@@ -248,24 +290,21 @@ p{
 }
 
 .commentbox{
-    display:inline-block;
-    justify-content:center;
-    width:80vw;
+    display:flexbox;
+    width:90%;
+    margin-left: 5%;
     margin-top: 5rem;
-    position:relative;
     overflow-x: hidden;
-    margin-left: 10%;
     
 }
 
 .narrative{
-    display:inline-block;
+    margin-left: 1em;
+    display:flexbox;
     justify-content:center;
-    width:80vw;
-    margin-top: 5rem;
-    position:relative;
+    margin-top: 3rem;
+    padding: 3%;
     overflow-x: hidden;
     overflow-y:hidden;
-    margin-left: 10%;
-    align-items: center;
+    align-items: left;
 }
