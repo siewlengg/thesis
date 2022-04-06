@@ -28,6 +28,8 @@ body
 .right{
     position:fixed;
     float:left;
+    align-items: center;
+    justify-content: center;
     height:100vh;
     overflow-y: scroll;
     top:0;
@@ -259,6 +261,8 @@ h6{
     font-size:1.5em;
     margin-top: 0.25em;
     text-align: center;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 h7{
