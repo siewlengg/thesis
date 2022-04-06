@@ -238,12 +238,12 @@ h3{
 }
 
 h4{
-    font-size:5rem;
+    font-size:3rem;
     position:relative;
     left:0;
     color:rgba(0,0,0,0.8);
-    line-height: 4rem;
-    background-color: rgba(255,255,255,0.3);;
+    background-color: rgba(255,255,255,0.3);
+    word-wrap: break-word;
 }
 
 h5{
