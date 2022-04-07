@@ -44,10 +44,10 @@ scene.add(background)
 gltfLoader.load(`static/model/${model}.glb`, function(glb){
     console.log(glb);
     const extension = glb.scene;
-    extension.position.x= -4.7; 
-    extension.position.y= 0.29; 
-    extension.position.z= -1.15;
-    extension.scale.set(0.9,1.8,1); 
+    extension.position.x= -5; 
+    extension.position.y= 0.33; 
+    extension.position.z= -1.5;
+    extension.scale.set(1,1.8,1); 
 
     extension.rotation.y= -19.8;
 
@@ -134,7 +134,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 // Controls
 var controls = new OrbitControls(camera,renderer.domElement);
 controls.enablePan = false;
-controls.autoRotate = true;
+controls.autoRotate = false;
 controls.autoRotateSpeed=0.2;
 
 //Mouse
