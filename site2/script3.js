@@ -168,7 +168,7 @@ function takeScreenshot() {
     w.document.body.appendChild(img);  
 }
     
-document.getElementById("shot1.2").addEventListener('click', takeScreenshot);
+document.getElementById("shot1.3").addEventListener('click', takeScreenshot);
 
 //Render loop
 
